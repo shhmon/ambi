@@ -6,8 +6,6 @@ from image import image_grab_mss
 from process import get_average_color, get_color_diff, get_whites, rgba_to_hsl
 import os
 
-
-
 BASE_URL = os.environ.get('HA_API_URL')
 TOKEN = os.environ.get('HA_API_TOKEN')
 
