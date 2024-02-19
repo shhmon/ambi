@@ -7,9 +7,9 @@ from process import get_average_color, get_color_diff, get_whites, rgba_to_hsl
 import os
 
 
-BASE_URL = "http://raspberrypi.local:8123/api"
 
-token = os.environ.get('HA_API_TOKEN')
+BASE_URL = os.environ.get('HA_API_URL')
+TOKEN = os.environ.get('HA_API_TOKEN')
 
 def get_image_bounds(factor):
     fw = 1920
@@ -27,7 +27,7 @@ def main(log, debug):
     fps = 1/60
     prevColor = [0,0,0]
     executor = WindowExecutor(max_workers=2, logging=log)
-    api = HaApi(BASE_URL, token, timeout=0.5, logging=log)
+    api = HaApi(BASE_URL, TOKEN, timeout=0.5, logging=log)
 
     while True:
         t = time.time()
