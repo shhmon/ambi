@@ -2,3 +2,5 @@
 *.png
 __pycache__
 venv
+nohup.out
+*.plist
