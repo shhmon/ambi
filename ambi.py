@@ -60,8 +60,8 @@ def main(log, debug):
             r, g, b = avg
             newColor = [r, g, b]
 
-            if newColor != prevColor:
-            #if get_color_diff(newColor, prevColor) > 8:
+            #if newColor != prevColor:
+            if get_color_diff(newColor, prevColor) > 8:
                 prevColor = newColor
 
                 #h, s, l = rgba_to_hsl(avg)
